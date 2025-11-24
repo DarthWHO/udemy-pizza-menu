@@ -1,7 +1,13 @@
+import Header from "./components/Header";
+import Menu from "./components/Menu";
+import Footer from "./components/Footer";
+
 export default function App() {
   return (
-    <div>
-      <h1>Hello, World!</h1>
+    <div className="container">
+      <Header />
+      <Menu />
+      <Footer />
     </div>
   );
 }
