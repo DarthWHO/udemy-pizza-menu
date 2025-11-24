@@ -1,13 +1,13 @@
-export default function Pizza(props) {
-  const pizzaClass = "pizza" + (props.soldOut ? " sold-out" : "");
+export default function Pizza({ pizzaObj }) {
+  const pizzaClass = "pizza" + (pizzaObj.soldOut ? " sold-out" : "");
   return (
-    <div className={pizzaClass}>
-      <img src={props.photoName} alt={props.name} />
+    <li className={pizzaClass}>
+      <img src={pizzaObj.photoName} alt={pizzaObj.name} />
       <div>
-        <h3>{props.name}</h3>
-        <p>{props.ingredients}</p>
-        <span>{props.soldOut ? "SOLD OUT" : props.price}</span>
+        <h3>{pizzaObj.name}</h3>
+        <p>{pizzaObj.ingredients}</p>
+        <span>{pizzaObj.soldOut ? "SOLD OUT" : pizzaObj.price}</span>
       </div>
-    </div>
+    </li>
   );
 }
